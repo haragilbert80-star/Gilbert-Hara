@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Interactive Task Manager</h1>
+  </header>
+
+  <main>
+    <section id="add-task-section">
+      <h2>Add New Task</h2>
+      <form id="task-form">
+        <label for="task-input">Task Name:</label>
+        <input type="text" id="task-input" required placeholder="e.g. add task" />
+
+        <label for="task-category">Category:</label>
+        <select id="task-category" required>
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="School">School</option>
+        </select>
+
+        <label for="task-due-date">Due Date (optional):</label>
+        <input type="date" id="task-due-date" />
+
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="stats-section">
+      <p>Total Tasks: <span id="total-count">0</span> | Completed: <span id="completed-count">0</span></p>
+    </section>
+
+    <section id="task-list-section">
+      <h2>Your Tasks</h2>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Interactive Task Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
